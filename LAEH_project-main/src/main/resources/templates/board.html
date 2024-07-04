@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <link rel="stylesheet" href="/src/main/resources/static/css/board.css" />
+    <link rel="stylesheet" href="/css/board.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/src/main/resources/static/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js"></script>
+
+  </head>
+
+<body>
+  <div class="Wrapper">
+  <div class="header">
+    <div class="navLogo">
+      <a href="index.html">
+        <img
+          src="https://i.ibb.co/9VyktjQ/image.png"
+          alt="HelloLogo"
+          class="helloLogo"
+        />
+      </a>
+    </div>
+    <div class="navTitle">
+      <p class="navMenu">
+        <a href="yogaClass.html">요가</a>
+      </p>
+      <p class="navMenu">
+        <a href="pilatesClass.html">필라테스</a>
+      </p>
+      <p class="navMenu">
+        <a href="healthClass.html">헬스</a>
+      </p>
+      <a href="myPage.html">
+        <p class="navMenu">마이페이지</p>
+      </a>
+      <a href="board.html">
+      <p class="navMenu navMenuFocus">게시판</p>
+      </a>
+      <button class="login">
+        <a href="login.html" style="color: #181818"> 로그인 </a>
+      </button>
+      <button class="logout hidden">
+        <a style="color: #181818"> 로그아웃 </a>
+      </button>
+
+      <p class="join">
+        <a href="join.html">아직 회원이 아니신가요?</a>
+        <img
+          src="https://i.ibb.co/7gRtFWv/image.png"
+          alt="image"
+          width="24px"
+        />
+      </p>
+    </div>
+  </div>
+
+
+
+      <!-- 게시판시작 -->
+       <div class="boardWrapper">
+       <div class="boardTitle">
+        <h1>
+        <div class="boardSearchTitle">자유게시판</div>
+        <div class="boardSearchQna hidden">Q&A</div>
+        <div class="boardSearchFaq hidden">FAQ</div>
+      </h1>
+        <div class="boardCaption">편안한 소통을 해주세요</div>
+      </div>
+      <div class="boardAndPostGrop">
+    <div method="board" id="boardMenu01" class="boardMain" >
+    <table class="boardTableBar">
+      <thead>
+          <tr class="boardTableBarTr">
+            <td tabindex="0" id="boardTabMenu01" class="boardTableBarTd">자유게시판</td>
+            <td tabindex="1" id="boardTabMenu02" class="boardTableBarTd">Q&A</td>
+            <td tabindex="2" id="boardTabMenu03" class="boardTableBarTd">FAQ</td>
+          </tr>
+      </thead>
+    </table>
+
+      <br>
+
+<table class="boardTablesubtitle">
+  <thead>
+    <tr class="boardTablesubtitleTr">
+      <td class="boardTablesubtitleTd boardNum">번호</td>
+      <td class="boardTablesubtitleTd boardPostTitle">제목</td>
+      <td class="boardTablesubtitleTd boardUserId">작성자</td>
+      <td class="boardTablesubtitleTd boardPostContent">일시</td>
+      <!-- <td class="boardTablesubtitleTd">조회수</td> -->
+    </tr>
+  </thead>
+  
+  <ul>
+    <li>
+      <tbody class="boardBody">
+        
+      </tbody>
+    </li>
+  </ul>
+  </table>
+    </div>
+  </div>
+
+
+  <!-- 글쓰기 버튼 -->
+<div id="boardPageText"  class="boardPageTextBarGrop">
+  <button id="writePostButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#boardPagewritePost">글쓰기</button>
+</div>
+
+
+
+<!-- 모달 창 -->
+<div class="boardPage fade hidden" id="boardPagewritePost" tabindex="-1" aria-labelledby="boardPagewritePostLabel" aria-hidden="true">
+  <div class="boardPageDialog">
+    <div class="boardPageContent">
+ 
+      <div class="modal-body">
+        <!-- 글쓰기 폼 -->
+        <div class="boardPageInputTable">
+          <div class="boardPageInputHeaderGrop">
+            <!-- <div class="boardPageInputHeader">게시판번호</div> -->
+             
+            <div><output type="text" class="boardPageInputFilter form-control" placeholder="게시판 번호" name="board"></div>
+            <div class="boardPageInputHeader">Title</div>
+            <div><input type="text" class="boardPageInput form-control" placeholder="제목을 입력해주세요" name="title"></div>
+            <!-- boardPageInputUserId 클래스 없어서 추가 0625 승환 -->
+            <div><input type="text" class="boardPageInputUserId form-control hidden" placeholder="제목을 입력해주세요" name="userId"></div>
+          </div>
+          <div class="boardPageInputHeaderCommentGrop">
+            <div class="boardPageInputHeader">Comment</div>
+            <div><textarea class="boardPageInputTextarea form-control" placeholder="내용을 입력해주세요" name="detail"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <div class="boardPageFooter">
+        <div type="button" id =boardPageCloseButton class="boardPageCloseButton btn-secondary" data-bs-dismiss="modal">닫기</div>
+        <div type="button" id="boardPageSubmitButton" class="boardPageSubmitButton btn-primary">등록</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- 페이징 -->
+    <nav>
+      <div class="boardpageWrap">
+        <div class="boardpageNation">
+          <!-- <a class="boardarrow pprev" href="#"><img src="https://i.ibb.co/99C6nHS/Group-59.png"></a></a>
+          <a class="boardarrow prev" href="#"><img src="https://i.ibb.co/2N7DcK4/Vector-38.png"></a></a>
+          
+           <a href="#" class="boardactive">1</a>
+           <a href="#" class="boardactive">2</a>
+           <a href="#" class="boardactive">3</a>
+           <a href="#" class="boardactive">4</a>
+           <a href="#" class="boardactive">5</a>
+           <a href="#" class="boardactive2">···</a>
+         
+           <a class="boardarrow next" href="#"><img src="https://i.ibb.co/T08SyrT/Vector-37-3.png"></a></a>
+           <a class="boardarrow nnext" href="#"><img src="https://i.ibb.co/93hYNXj/Group-58.png" ></a></a>
+          </div> -->
+        </div>
+      </div>
+
+
+
+
+     
+     <div style="height: 300px; width: 100%;"></div>
+    </div>
+  </div>
+</div>
+      <!-- 게시판 끝 -->
+
+
+
+
+<!-- 푸터 -->
+<div class="footerBar" style="display: flex">
+  <p class="bold">
+    3개월 구독시 20% 할인 이벤트 진행중! 지금 구독하고 플러스 회원만의
+    혜택을 누려보세요
+    <img
+      src="https://i.ibb.co/XjrSbLb/fire-1f525.png"
+      alt="fire-1f525"
+      width="24px"
+      style="background: none; margin: 0"
+    />
+  </p>
+  <div class="footerBtnArea" style="display: flex; justify-content: end">
+      
+    <div class="footerBtn">
+      <a href="eventPage.html">지금 구독하기</a>
+    </div>
+
+    
+    <div class="topBtn">
+      <a href="#Top">
+        <img
+          src="https://i.ibb.co/Xb6dmHC/Group-46.png"
+          alt="Group-46"
+          width="26px"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+<div class="footer" style="margin-top: 0;">
+  <form>
+    <select
+      title="teamSite"
+      id="s1"
+      name="teamSite"
+      class="teamSite"
+      onchange="window.open(value,'_blank');"
+    >
+      <option value="0">Our Team</option>
+      <option value="https://github.com/SeungHwanYuk">
+        Yuk SeungHwan
+      </option>
+      <option value="https://github.com/star0717">Yoon Byeol</option>
+      <option value="https://github.com/bobo459">Song JinKyung</option>
+    </select>
+  </form>
+  <p>ⓒ 2024. Team TBeaver all rights reserved.</p>
+</div>
+
+
+<script src="/js/board.js"></script>
+<script src="/js/cookie.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+ 

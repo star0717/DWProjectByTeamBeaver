@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="
+    https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js
+    "></script>
+    <title>수강이력</title>
+
+    <!-- <style
+    tr
+    {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+    }
+    ></style> -->
+  </head>
+  <body>
+
+    <div class="Wrapper">
+      <div class="header">
+        <div class="navLogo">
+          <a href="index.html">
+            <img
+              src="https://i.ibb.co/9VyktjQ/image.png"
+              alt="HelloLogo"
+              class="helloLogo"
+            />
+          </a>
+        </div>
+        <div class="navTitle">
+          <p class="navMenu">
+            <a href="yogaClass.html">요가</a>
+          </p>
+          <p class="navMenu">
+            <a href="pilatesClass.html">필라테스</a>
+          </p>
+          <p class="navMenu">
+            <a href="healthClass.html">헬스</a>
+          </p>
+          <a href="myPage.html">
+            <p class="navMenu navMenuFocus">마이페이지</p>
+          </a>
+          <a href="board.html">
+            <p class="navMenu">게시판</p>
+          </a>
+          <button class="login">
+            <a href="login.html" style="color: #181818"> 로그인 </a>
+          </button>
+          <button class="logout hidden">
+            <a href="login.html" style="color: #181818"> 로그아웃 </a>
+          </button>
+
+          <p class="join">
+            <a href="join.html">아직 회원이 아니신가요?</a>
+            <img
+              src="https://i.ibb.co/7gRtFWv/image.png"
+              alt="image"
+              width="24px"
+            />
+          </p>
+        </div>
+      </div>
+
+<!-- ---------------------------------- -->
+ <div class="courseHistoryTab">
+    <div id="courseHistoryTabMenu01" class="tabContents historyText " ><p class="historyTextP01" style="padding: 10px 20px; border-bottom: 2px solid;">내가 듣는 강좌</p></div>
+    <div id="courseHistoryTabMenu02" class="tabContents historyText" ><p class="historyTextP02" style="padding: 10px 20px; border-bottom: 2px solid;">위시리스트</p></div>
+ </div>
+
+         <!-- 서브메뉴 시작 -->
+         <div class="subMenu">
+          <p
+          style="
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            padding: 14px 0 10px;
+          "
+        >
+          바로가기
+        </p>
+        <hr
+          style="width: 100%; border: 1px solid #fff; margin-bottom: 10px"
+        />
+          <a href="editProfile.html">
+            <p class="subMenuTitle ">회원정보 수정</p>
+          </a>
+          <a href="courseHistory.html">
+            <p class="subMenuTitle point">수강이력</p>
+          </a>
+          <a href="dailyChart.html">
+            <p class="subMenuTitle">데일리차트</p>
+          </a>
+        </div>
+        <!-- 서브메뉴 끝 -->
+
+ <div class="myCourseWrap01 historyTextFocus">
+    <!-- <p>내가 듣는 강좌</p> -->
+
+    <!-- 승환 subscribe 추가 -->
+    <!-- <div class="subscribeTitle">
+      <h2>Subscribe</h2>
+    </div> -->
+    <div class="subscribeBox">
+      <table class="subscribeTable">
+        <thead class="subscribeHead">
+          <th class="subscribeTh hidden" style="font-size: x-large;">구독한 강의가 없습니다T^T</th>
+          <th> </th>
+        </thead>
+        <tbody class="subscribeBody"></tbody>
+      </table>
+    </div>
+ </div>
+ 
+ <div class="myCourseWrap02 hidden historyTextFocus">
+    <!-- <p>위시리스트</p> -->
+          <!-- 승환 위시리스트 추가 -->
+          <div class="wishListTitle">
+            <!-- <h2>WishList</h2> -->
+          </div>
+
+
+          <div class="wishListBox">
+            <table class="wishListTable">
+              <thead class="wishListHead">
+                <th class="wishListTh hidden" style="font-size: x-large;">찜 목록이 비어있네요T^T</th>
+                <th> </th>
+              </thead>
+              <tbody class="wishListBody"></tbody>
+            </table>
+            <div class="historyBtnWrap">
+              <div class="purchaseBtn">전부 구매하기</div>
+              <!-- <div class="totalPrice">합계</div> -->
+              <div class="deleteAllBtn">다지워버령</div>
+            </div>
+          </div>
+        </div>
+<!-- 예아아아ㅏ아아아아아ㅏ아아아아아ㅏ -->
+
+
+<!-- ---------------------------------- -->
+      <div class="footerBar" style="display: flex">
+        <p class="bold">
+          3개월 구독시 20% 할인 이벤트 진행중! 지금 구독하고 플러스 회원만의
+          혜택을 누려보세요
+          <img
+            src="https://i.ibb.co/XjrSbLb/fire-1f525.png"
+            alt="fire-1f525"
+            width="24px"
+            style="background: none; margin: 0"
+          />
+        </p>
+        <div class="footerBtnArea" style="display: flex; justify-content: end">
+            
+          <div class="footerBtn">
+            <a href="eventPage.html">지금 구독하기</a>
+          </div>
+
+          
+          <div class="topBtn">
+            <a href="#Top">
+              <img
+                src="https://i.ibb.co/Xb6dmHC/Group-46.png"
+                alt="Group-46"
+                width="26px"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <form>
+          <select
+            title="teamSite"
+            id="s1"
+            name="teamSite"
+            class="teamSite"
+            onchange="window.open(value,'_blank');"
+          >
+            <option value="0">Our Team</option>
+            <option value="https://github.com/SeungHwanYuk">
+              Yuk SeungHwan
+            </option>
+            <option value="https://github.com/star0717">Yoon Byeol</option>
+            <option value="https://github.com/bobo459">Song JinKyung</option>
+          </select>
+        </form>
+        <p>ⓒ 2024. Team TBeaver all rights reserved.</p>
+      </div>
+    </div>
+    </div>
+    <script src="/js/courseHistory.js"></script>
+  </body>
+</html>

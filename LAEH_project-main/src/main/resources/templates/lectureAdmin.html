@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="
+    https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js
+    "></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>강의 관리</title>
+  </head>
+  <body>
+    <div class="Wrapper">
+      <div class="header">
+        <!-- 메인메뉴 추가 필요 -->
+        <div class="navLogo">
+          <!-- <img src="https://i.ibb.co/thFZ0wd/Logo.png" alt="Logo" /> -->
+          <!-- <img src="https://i.ibb.co/ns3JKPp/TBeaver-Logo.png" alt="TBeaver-Logo"> -->
+          <a href="index.html">
+            <img
+              src="https://i.ibb.co/9VyktjQ/image.png"
+              alt="HelloLogo"
+              class="helloLogo"
+            />
+          </a>
+        </div>
+        <div class="navTitle">
+          <a href="yogaClass.html">
+            <p class="navMenu">요가</p>
+          </a>
+          <a href="pilatesClass.html">
+            <p class="navMenu">필라테스</p>
+          </a>
+          <a href="healthClass.html">
+            <p class="navMenu">헬스</p>
+          </a>
+          <a href="myPage.html">
+            <p class="navMenu">마이페이지</p>
+          </a>
+          <!-- <a href="adminPage.html">
+            <p class="navMenuAdmin hidden">관리자페이지</p>
+          </a> -->
+          <a href="board.html">
+            <p class="navMenu">게시판</p>
+          </a>
+          <button class="login">
+            <a href="login.html" style="color: #181818"> 로그인 </a>
+          </button>
+          <button class="logout hidden">
+            <a href="index.html" style="color: #181818"> 로그아웃 </a>
+          </button>
+
+          <p class="join">
+            <a href="join.html">아직 회원이 아니신가요?</a>
+            <img
+              src="https://i.ibb.co/7gRtFWv/image.png"
+              alt="image"
+              width="24px"
+            />
+          </p>
+          <p class="navMenuAdmin hidden admin">
+            <a href="adminPage.html">관리자님 환영합니다!</a>
+            <img
+              src="https://i.ibb.co/10Y3RwC/disguised-face-1f978.png"
+              width="24px"
+              alt="disguised-face-1f978"
+            />
+          </p>
+        </div>
+      </div>
+      <div class="signupTitle">
+        <h2>강의관리</h2>
+      </div>
+      <!-- 서브메뉴 시작 -->
+      <div class="subMenu">
+        <p
+          style="
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            padding: 14px 0 10px;
+          "
+        >
+          바로가기
+        </p>
+        <hr style="width: 100%; border: 1px solid #fff; margin-bottom: 10px" />
+        <a href="userInfoCheck.html">
+          <p class="subMenuTitle">회원관리</p>
+        </a>
+        <a href="teacherInfoCheck.html">
+          <p class="subMenuTitle">강사관리</p>
+        </a>
+        <a href="writeAdmin.html">
+          <p class="subMenuTitle">게시글관리</p>
+        </a>
+        <a href="lectureAdmin.html">
+          <p class="subMenuTitle point">강의관리</p>
+        </a>
+      </div>
+      <!-- 서브메뉴 끝 -->
+
+      <!-- 강의 관리 추가 승환 0626 -->
+      <div class="subMain">
+        <div class="teacherDetail">
+          <div class="subjectDetailHealth grayscale">
+            <button
+              class="absoluteBtn"
+              id="absoluteBtnHealth"
+              style="margin: 84% 68%"
+              value="H"
+            >
+              Health 관리
+            </button>
+          </div>
+          <div class="subjectDetailYoga grayscale">
+            <button
+              class="absoluteBtn"
+              id="absoluteBtnYoga"
+              style="margin: 84% 68%"
+              value="Y"
+            >
+              Yoga 관리
+            </button>
+          </div>
+          <div class="subjectDetailPilates grayscale">
+            <button
+              class="absoluteBtn"
+              id="absoluteBtnPilates"
+              style="margin: 84% 68%"
+              value="P"
+            >
+              Pilates 관리
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="classList">
+        <div class="subjectTitle" style="display: flex">
+          <div class="subjectName noneMargin"></div>
+          <div class="subjectFilter noneMargin">
+            <select title="dd" name="" id="sortContents">
+              <option value="date" style="color: #252525">최신순</option>
+              <option value="popular" style="color: #252525">인기순</option>
+              <option value="contentsNum" style="color: #252525">
+                영상번호순
+              </option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div class="lecture"></div>
+        </div>
+      </div>
+
+      <div class="footer" style="margin-top: 0">
+        <form>
+          <select
+            title="teamSite"
+            id="s1"
+            name="teamSite"
+            class="teamSite"
+            onchange="window.open(value,'_blank');"
+          >
+            <option value="0">Our Team</option>
+            <option value="https://github.com/SeungHwanYuk">
+              Yuk SeungHwan
+            </option>
+            <option value="https://github.com/star0717">Yoon Byeol</option>
+            <option value="https://github.com/bobo459">Song JinKyung</option>
+          </select>
+        </form>
+        <p>ⓒ 2024. Team TBeaver all rights reserved.</p>
+      </div>
+    </div>
+    <script src="/js/adminPage.js"></script>
+    <script src="/js/lectureAdmin.js"></script>
+  </body>
+</html>

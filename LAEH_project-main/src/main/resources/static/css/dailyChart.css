@@ -1,0 +1,273 @@
+*{
+  background-color: #252525;
+}
+
+.carlorieTab {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 60px;
+  align-items: center;
+  margin: 50px auto;
+  margin-top: 50px;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.carlorieTab > .carlorieTabMenu01,
+.carlorieTab > .carlorieTabMenu02 {
+  border-bottom: 2px solid #fff;
+  width: 120px;
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#carlorieTabMenu01:focus,
+#carlorieTabMenu02:focus  {
+  padding-bottom: 10px;
+  color: #00ffa3;
+}
+
+
+/* 
+
+.carloriehistoryText {
+  padding-bottom: 10px;
+  color: #fff;
+  border-bottom: 2px solid #252525;
+}
+
+
+.carlorieWrap01 > p .carlorieWrap02 > p {
+  color: inherit;
+}
+
+
+
+ */
+
+
+
+
+
+
+
+
+.memoTable{
+  border-collapse: collapse;
+  /* margin: 0; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-top: 40px;
+
+}
+
+.memothead{
+  border-bottom: #ffff solid 2px;
+    width: calc(100% - 800px);
+    min-width: 700px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.memoBody{
+  width: calc(100% - 800px);
+  min-width: 700px;
+  margin: 0px auto;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.memothead > tr{
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+  margin: 10px 0;
+}
+
+.memothead > tr > th{
+  margin: 0;
+  text-align: center;
+  /* width: 200px; */
+}
+
+.memoData{
+  display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 300px;
+    max-width: 700px;
+    margin-top: 50px;
+}
+.calorieTr{
+  border-bottom: 1px solid #444;
+}
+
+.memoTr{
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+  border-bottom: 1px solid #444;
+}
+
+.memoTr > td{
+  /* width: 250px; */
+  margin: 0;
+  text-align: center;
+}
+
+.memoGroup{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 300px;
+  max-width: 700px;
+  height: 100px;
+  padding-left: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  padding-top: 10px;
+  color: black;
+}
+.memoSaveBtnGroup{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  min-width: 300px;
+  max-width: 740px;
+  margin-top: 10px;
+   margin-bottom: 100px;
+}
+.memoSaveBtn{
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00ffa3;
+  height: 40px;
+  margin: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.memoSaveBtn:hover{
+  color: #fff;
+  background-color: #60ffc5 ;
+  }
+
+
+
+
+
+.calorieTable{
+  margin: 40px 0;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 4px;
+}
+
+.calorieTable > thead > tr{
+  border-bottom: 2px solid #ffffff;
+}
+
+.calorieTable > thead > tr > th{
+  padding: 10px;
+     /* border-bottom: 1px solid #444444; */
+}
+
+.memoTr > td:first-child{
+  width: 85px;
+}
+.memoTr > td:nth-child(even){
+  width: 500px;
+}
+
+.memoBox01{
+  width: 85px;
+}
+.memoBox02{
+  width: 500px;
+}
+.memoBox03{
+  width: 100px;
+}
+
+
+
+  .carloriesearch{
+    width: 150px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .carlorieGroup{
+display: flex;
+    /* justify-content: center; */
+    /* width: 100%; */
+    /* width: calc(100% - 700px); */
+    max-width: 800px;
+    min-width: 500px;
+
+  }
+
+  .calorieGroup{
+    display: flex;
+    /* justify-content: center; */
+    width: 100%;
+    /* width: calc(100% - 700px); */
+    max-width: 850px;
+    min-width: 500px;
+    outline: none;
+    background-color: #fff;
+    border: none;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 10px;
+}
+  .calorieBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffff; */
+    width: 100%;
+    min-width: 300px;
+    max-width: 800px;
+    /* margin: 0; */
+    padding: 0;
+  }
+
+  .foodSearchBtn{
+    width: 150px;
+    display: flex;
+    background-color: #00ffa3;
+    justify-content: center;
+    align-items: center;
+    color: #252525;
+  }
+
+
+
+  /* 행색을 넣기 */
+  .calorieTable {
+    width: 100%;
+    /* border-top: 1px solid #444444; */
+    /* border-bottom: 1px solid #444444; */
+    border-collapse: collapse;
+  }
+  .calorieBody > th, td {
+        /* border-bottom: 1px solid #444444; */
+    padding: 10px;
+    text-align: center;
+  }
+

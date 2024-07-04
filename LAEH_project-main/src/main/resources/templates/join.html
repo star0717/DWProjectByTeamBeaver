@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>join</title>
+    <script src="
+https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js
+"></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <a name="Top"></a>
+    <div class="Wrapper">
+      <div class="header">
+        <div class="navLogo">
+          <a href="index.html">
+            <img
+              src="https://i.ibb.co/9VyktjQ/image.png"
+              alt="HelloLogo"
+              class="helloLogo"
+            />
+          </a>
+        </div>
+        <div class="navTitle">
+          <p class="navMenu">
+            <a href="yogaClass.html">요가</a>
+          </p>
+          <p class="navMenu">
+            <a href="pilatesClass.html">필라테스</a>
+          </p>
+          <p class="navMenu">
+            <a href="healthClass.html">헬스</a>
+          </p>
+          <a href="myPage.html">
+            <p class="navMenu">마이페이지</p>
+          </a>
+          <a href="board.html">
+            <p class="navMenu">게시판</p>
+          </a>
+          <button class="login">
+            <a href="login.html" style="color: #181818"> 로그인 </a>
+          </button>
+          <button class="logout hidden">
+            <a href="login.html" style="color: #181818"> 로그아웃 </a>
+          </button>
+
+          <p class="join">
+            <a href="join.html">아직 회원이 아니신가요?</a>
+            <img
+              src="https://i.ibb.co/7gRtFWv/image.png"
+              alt="image"
+              width="24px"
+            />
+          </p>
+        </div>
+      </div>
+
+      <div class="signupTitle">
+        <h2>Sign up</h2>
+      </div>
+      <div class="signupBox">
+        <!-- ---------------------------------- -->
+        <input
+          type="text"
+          class="singupGroup"
+          id="newUserId"
+          placeholder="아이디"
+        />
+        <div
+          class="successMessage hidden noneMargin"
+          style="font-size: 14px; color: #00ffa3; width: 390px"
+        >
+          사용 가능한 아이디입니다.
+        </div>
+        <div
+          class="lengthMessage hidden noneMargin"
+          style="font-size: 14px; color: crimson; width: 390px"
+        >
+          아이디는 4~12글자 내로 입력해주세요.
+        </div>
+        <div
+          class="conditionErrorMessage hidden noneMargin"
+          style="font-size: 14px; color: crimson; width: 390px"
+        >
+          아이디는 영어 또는 숫자만 가능합니다.
+        </div>
+        <input
+          type="password"
+          class="singupGroup"
+          id="newPassword"
+          placeholder="비밀번호"
+        />
+        <div
+          class="conditionWarningMessage hidden noneMargin"
+          style="font-size: 14px; color: crimson; width: 390px"
+        >
+          비밀번호는 8글자 이상 영문, 숫자, 특수문자(@$!%*#?&)를 포함하세요.
+        </div>
+        <input
+          type="password"
+          class="singupGroup"
+          id="checkPassword"
+          placeholder="비밀번호 확인"
+        />
+        <div
+          class="mismatchMessage hidden noneMargin"
+          style="font-size: 14px; color: crimson; width: 390px"
+        >
+          비밀번호를 확인해주세요.
+        </div>
+        <!-- ---------------------------------- -->
+
+        <input
+          type="text"
+          class="singupGroup"
+          id="newUserName"
+          placeholder="이름"
+        />
+        <input
+          type="email"
+          class="singupGroup"
+          id="newUserEmail"
+          placeholder="이메일"
+        />
+        <select
+          type="text"
+          class="singupGroup"
+          id="newUserGender"
+          placeholder="성별"
+          style="color: gray"
+        >
+          <option style="color: gray" value="male">남성</option>
+          <option style="color: gray" value="female">여성</option>
+          <option style="color: gray" value="none">선택안함</option>
+        </select>
+        <input
+          type="text"
+          class="singupGroup"
+          id="newUserNickname"
+          placeholder="닉네임"
+        />
+        <input
+          type="number"
+          class="singupGroup"
+          id="newUserPhoneNum"
+          placeholder="핸드폰 번호"
+        />
+        <div></div>
+        <div class="loginBtn">회원가입</div>
+      </div>
+      <div class="signupLogin">
+        <div class="signupLogin signupLoginText">
+          이미 가입된 계정이있으신가요?
+        </div>
+        <div class="signupLogin signupLoginBtn">
+          <a href="login.html">로그인 하기</a>
+        </div>
+      </div>
+
+      <div class="footerBar" style="display: flex">
+        <p class="bold">
+          3개월 구독시 20% 할인 이벤트 진행중! 지금 구독하고 플러스 회원만의
+          혜택을 누려보세요
+          <img
+            src="https://i.ibb.co/XjrSbLb/fire-1f525.png"
+            alt="fire-1f525"
+            width="24px"
+            style="background: none; margin: 0"
+          />
+        </p>
+        <div class="footerBtnArea" style="display: flex; justify-content: end">
+          <div class="footerBtn">
+            <a href="eventPage.html">지금 구독하기</a>
+          </div>
+
+          <div class="topBtn">
+            <a href="#Top">
+              <img
+                src="https://i.ibb.co/Xb6dmHC/Group-46.png"
+                alt="Group-46"
+                width="26px"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <form>
+          <select
+            title="teamSite"
+            id="s1"
+            name="teamSite"
+            class="teamSite"
+            onchange="window.open(value,'_blank');"
+          >
+            <option value="0">Our Team</option>
+            <option value="https://github.com/SeungHwanYuk">
+              Yuk SeungHwan
+            </option>
+            <option value="https://github.com/star0717">Yoon Byeol</option>
+            <option value="https://github.com/bobo459">Song JinKyung</option>
+          </select>
+        </form>
+        <p>ⓒ 2024. Team TBeaver all rights reserved.</p>
+      </div>
+    </div>
+    <script src="/js/join.js"></script>
+  </body>
+</html>

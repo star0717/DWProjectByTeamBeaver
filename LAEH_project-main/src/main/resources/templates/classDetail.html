@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js"></script>
+    <title>강의 상세보기</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/classDetail.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://kit.fontawesome.com/a1d80f3718.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="Wrapper">
+      <div class="header">
+        <div class="navLogo">
+          <a href="index.html">
+            <img
+              src="https://i.ibb.co/9VyktjQ/image.png"
+              alt="HelloLogo"
+              class="helloLogo"
+            />
+          </a>
+        </div>
+      <div class="navTitle">
+          <p class="navMenu">
+            <a href="yogaClass.html">요가</a>
+          </p>
+          <p class="navMenu">
+            <a href="pilatesClass.html">필라테스</a>
+          </p>
+          <p class="navMenu">
+            <a href="healthClass.html">헬스</a>
+          </p>
+          <p class="navMenu">
+          <a href="myPage.html">마이페이지</a>
+          </p>
+          <p class="navMenu">
+            <a href="board.html">게시판</a>
+            </p>
+  
+
+          <button class="login">
+            <a href="login.html" style="color: #181818"> 로그인 </a>
+          </button>
+          <button class="logout hidden">
+            <a style="color: #181818"> 로그아웃 </a>
+          </button>
+
+          <p class="join">
+            <a href="join.html">아직 회원이 아니신가요?</a>
+            <img
+              src="https://i.ibb.co/7gRtFWv/image.png"
+              alt="image"
+              width="24px"
+            />
+          </p>
+        </div>
+      </div>
+      <!-- <h1>class detail page</h1> -->
+      <div class="detailPageWrap">
+        <div
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <div class="content" style="width: 600px; margin-top: 100px"></div>
+        </div>
+
+
+        <div class="cartWrap">
+          
+        <button class="addWishListBtn"><i class="fa-solid fa-heart"></i></button>
+        <button class="SubscribeBtn">구독하기</button>
+        <button class="lecturePlayerBtn hidden">시청하기!</button>
+
+        <button class="myWishListBtn">위시리스트 가기</button>
+        </div>
+
+
+        <div class="lectureIntro">
+          <div class="lectureIntroTitle">
+            <!-- <img
+            src="https://i.ibb.co/7gRtFWv/image.png"
+            alt="image"
+            width="24px"
+          /> -->
+            <img
+              src="https://i.ibb.co/cvQWFVy/image.png"
+              alt="image"
+              style="margin-bottom: 40px"
+              width="72px"
+            />
+            <p style="font-size: 24px">
+              왜
+              <span class="bold point">HelloPT</span>여야만 할까요?
+            </p>
+          </div>
+          <div class="detailImageWrap">
+            <img
+              src="/image/healthDetail.png"
+              alt="img"
+              class="detailImage01 hidden"
+            />
+            <img
+              src="/image/yogaDetail.png"
+              alt="img"
+              class="detailImage02 hidden"
+            />
+            <img
+              src="/image/pilatesDetail.png"
+              alt="img"
+              class="detailImage03 hidden"
+            />
+          </div>
+          </div>
+        </div>
+        <!-- <img src="https://i.ibb.co/gPtmRZh/image.png" alt="image" /> -->
+        <div class="detailImage">
+          <!-- <img
+          src="https://i.ibb.co/bQzYGYS/health-Detail-2.png"
+          alt="health-Detail-2"
+        /> -->
+          <!-- <img
+            src="https://i.ibb.co/sRK2JZd/health-Detail-3.png"
+            alt="health-Detail-3"
+          /> -->
+        </div>
+      </div>
+      <div class="footerBar" style="display: flex">
+        <p class="bold">
+          3개월 구독시 20% 할인 이벤트 진행중! 지금 구독하고 플러스 회원만의
+          혜택을 누려보세요
+          <img
+            src="https://i.ibb.co/XjrSbLb/fire-1f525.png"
+            alt="fire-1f525"
+            width="24px"
+            style="background: none; margin: 0"
+          />
+        </p>
+        <div class="footerBtnArea" style="display: flex; justify-content: end">
+            
+          <div class="footerBtn">
+            <a href="eventPage.html">지금 구독하기</a>
+          </div>
+
+          
+          <div class="topBtn">
+            <a href="#Top">
+              <img
+                src="https://i.ibb.co/Xb6dmHC/Group-46.png"
+                alt="Group-46"
+                width="26px"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer" style="margin-top: 0;">
+        <form>
+          <select
+            title="teamSite"
+            id="s1"
+            name="teamSite"
+            class="teamSite"
+            onchange="window.open(value,'_blank');"
+          >
+            <option value="0">Our Team</option>
+            <option value="https://github.com/SeungHwanYuk">
+              Yuk SeungHwan
+            </option>
+            <option value="https://github.com/star0717">Yoon Byeol</option>
+            <option value="https://github.com/bobo459">Song JinKyung</option>
+          </select>
+        </form>
+        <p>ⓒ 2024. Team TBeaver all rights reserved.</p>
+      </div>
+      <script src="/js/classDetail.js"></script>
+    </div>
+  </body>
+</html>
